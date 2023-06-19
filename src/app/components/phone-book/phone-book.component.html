@@ -1,0 +1,3 @@
+<app-phone-form (added)="addPhone($event)"></app-phone-form>
+<app-phone-edit [phone]="phonesBookService.selectPhone" (edit)="editPhone($event)"></app-phone-edit>
+<app-phone-boook-tab (removed)="removePhone($event)" (edit)="editPhoneTab($event)"></app-phone-boook-tab>

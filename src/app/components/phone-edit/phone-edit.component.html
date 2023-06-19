@@ -1,0 +1,20 @@
+<form (submit)="onFormEdit(type.value)">
+    <table class="table table-primary table-striped table-bordered">
+        <tbody>          
+          <tr>
+            <td class="wight-table"><input [(ngModel)]="phone.surName" name="surName" type="text"  class="form-control" [(ngModel)]="phone.surName"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.name" name="name" type="text"  class="form-control" [(ngModel)]="phone.name"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.patronymic" name="patronymic" type="text"  class="form-control" [(ngModel)]="phone.patronymic"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.phoneNumber" name="phoneNumber" type="text"  class="form-control" ></td>
+            <td class="wight-table">
+              <select   name="type" class="form-select" [value]="phone.typePhone" #type>
+                <option  *ngFor="let type of phoneTypes.types" >{{type}}</option>
+            </select>
+            </td>
+            <td class="wight-table">
+                <button type="submit" class="btn btn-success">Edit</button>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+</form>

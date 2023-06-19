@@ -1,0 +1,21 @@
+<form  (submit)="onFormSubmint(type.value)">
+    <table class="table table-primary table-striped table-bordered">
+        <tbody>          
+          <tr>
+            <td class="wight-table"><input [(ngModel)]="phone.surName" name="surName" type="text"  class="form-control" placeholder="{{header.surName}}"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.name" name="name" type="text"  class="form-control" placeholder="{{header.name}}"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.patronymic" name="patronymic" type="text"  class="form-control" placeholder="{{header.patronymic}}"></td>
+            <td class="wight-table"><input [(ngModel)]="phone.phoneNumber" name="phoneNumber" type="text"  class="form-control" placeholder="{{header.phoneNumber}}"></td>
+            <td class="wight-table">
+              <select   name="type" class="form-select" #type>
+                <option value="none" selected="selected" disabled hidden>{{header.phoneType}}</option>
+                <option  *ngFor="let type of phoneTypes.types" value="{{type}}">{{type}}</option>
+            </select>
+            </td>
+            <td class="wight-table">
+                <button type="submit" class="btn btn-success" onClick="window.location.reload()">Add</button>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+</form>
